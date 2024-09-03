@@ -27,7 +27,7 @@ public class Main {
             System.out.println(asterisco2+"\n");
         }
 
-        */
+
         Integer valor2 = null;
         Integer total = 0;
         String soma = "";
@@ -52,5 +52,26 @@ public class Main {
             total += Integer.parseInt(soma);
             }
         System.out.println(total);
+
+         */
+
+        ArrayList<String> list = new ArrayList<>();
+        list.add("3twone");
+        list.add("4nineight55");
+        Integer total = 0;
+        String nome;
+        for(int i = 0; i < list.size(); i++){
+            nome = list.get(i);
+            String soma = "";
+            Service service = new Service();
+            String valor = "";
+            valor = service.oraganiza(0,nome,"");
+            char c = valor.charAt(0);
+            char s = valor.charAt(valor.length() -1);
+            soma += c;
+            soma += s;
+            total += Integer.valueOf(soma);
         }
+        System.out.println(total);
+    }
 }
